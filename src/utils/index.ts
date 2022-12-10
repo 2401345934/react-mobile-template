@@ -65,6 +65,8 @@ export const sortType = (arr: any, type: number = 1) => {
     }
   })
 }
+/** px 转 vw, 375 是设置的屏幕宽度 */
+const px2vw = (px: number): string => `${(window.screen.width / 375) * px}vw`
 
 export default {
   continous,
@@ -75,5 +77,6 @@ export default {
   daysBetween,
   isEmptyObject,
   random,
-  sortType
+  sortType,
+  px2vw
 }
